@@ -1,0 +1,112 @@
+:root {
+    --clr-house: rgb(204, 204, 135);
+    --clr-book: rgb(179, 84, 84);
+    --clr-question: rgb(246, 110, 110);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(17, 24, 39);
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.logo>a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-inline: 1rem;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.logo>a:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    height: 100%;
+}
+
+nav li {
+    line-height: 64px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+nav li:hover {
+    opacity: 1;
+}
+
+nav a {
+    padding-inline: 1rem;
+}
+
+nav a>i {
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav li>a {
+    display: block;
+    height: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to right, #38bdf8, #c084fc);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    transition: all 0.3s ease
+}
+
+nav li>a:hover {
+    background-size: 100% 1px;
+    .fa-house {
+        color: var(--clr-house)
+    }
+    .fa-book {
+        color: var(--clr-book)
+    }
+    .fa-question {
+        color: var(--clr-question);
+    }
+}
+
+.fa-moon {
+    font-size: 1.5rem;
+    color: rgb(252, 252, 209);
+}
+
+.btn-mode {
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    padding: 0.425rem;
+    transition: all 0.2s ease;
+}
+
+.btn-mode:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-mode:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
