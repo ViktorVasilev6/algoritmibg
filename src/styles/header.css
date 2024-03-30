@@ -1,51 +1,69 @@
 :root {
     --clr-house: rgb(204, 204, 135);
-    --clr-book: rgb(179, 84, 84);
+    --clr-book: rgb(196, 164, 132);
     --clr-question: rgb(246, 110, 110);
+    --clr-globe: rgb(183, 252, 252);
+}
+
+header {
+    background-color: rgb(17, 24, 39);
+    width: 100vw;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(17, 24, 39);
-    padding-block: 0.5rem;
-    padding-inline: 1.5rem;
+    padding: 0.5rem;
+    margin: 0 auto; 
+    /* max-width: 80rem; */
+    width: 100vw;
     font-size: 1.2rem;
 }
 
-.logo>a {
-    display: flex;
-    align-items: center;
+.logo {
+    line-height: 64px;
     height: 100%;
-    padding-inline: 1rem;
-    opacity: 0.8;
-    transition: all 0.2s ease;
 }
 
-.logo>a:hover {
-    opacity: 1;
-    cursor: pointer;
+.logo,
+ul,
+.nav-buttons {
+    flex: 1;
 }
 
-.logo img {
-    width: 4rem;
-    margin-right: 1rem;
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logo h1 {
     font-size: 2rem;
 }
 
+.logo h1 a {
+    display: inline-block;
+    line-height: 64px;
+    height: 100%;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.logo h1 a:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 nav>ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 4rem;
+    justify-content: center;
+    gap: 1.25rem;
     height: 100%;
 }
 
 nav li {
+    font-family: 'Space Grotesk', sans-serif;
     line-height: 64px;
     opacity: 0.8;
     transition: all 0.2s ease;
@@ -55,13 +73,9 @@ nav li:hover {
     opacity: 1;
 }
 
-nav a {
-    padding-inline: 1rem;
-}
-
 nav a>i {
     margin-right: 0.5rem;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 nav li>a {
@@ -86,11 +100,18 @@ nav li>a:hover {
     .fa-question {
         color: var(--clr-question);
     }
+    .fa-globe {
+        color: var(--clr-globe)
+    }
 }
 
 .fa-moon {
     font-size: 1.5rem;
     color: rgb(252, 252, 209);
+}
+.fa-envelope {
+    font-size: 1.5rem;
+    color: rgb(235, 233, 233);
 }
 
 .btn-mode {
