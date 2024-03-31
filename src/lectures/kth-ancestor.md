@@ -2,7 +2,7 @@
 title: kth-ancestor
 titleBar: Намиране на k-ти предшественик
 author: Виктор Василев
-date: 2024-04-01T01:24
+date: 2024-04-01
 tags:
   - post
 ---
