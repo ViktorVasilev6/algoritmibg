@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
     <title>{{ title }}</title>
 </head>
 
@@ -27,6 +29,8 @@
             nthChild.style.color = "var(" + iconClr + ")";
         });
     </script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll()</script>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+---
+layout: 'base.njk'
+---
+<div class="wrapper">
+    <div class="lecture-container">
+        <h1 class="lecture-title">{{ title }}</h1>
+        {{ content | safe }}
+        <div class="article-footer">
+            <h2>Автор: {{ author }}</h2>
+            <h2 class="edit-date">Последна редакция: {{ date | postDate}}</h2>
+        </div>
+    </div>
+</div>

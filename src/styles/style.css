@@ -5,6 +5,7 @@
 @import url("header.css");
 @import url("home_main.css");
 @import url("lectures.css");
+@import url("article.css");
 
 * {
   margin: 0;
@@ -34,6 +35,6 @@ a:active {
   text-decoration: none;
 }
 
-.lectures-container {
-  border: 2px solid green;
+a:hover {
+  cursor: pointer;
 }
