@@ -13,6 +13,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "TitleBar", name: "titleBar", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "datetime", widget: "date", time: false }
+      - { label: "Date", name: "datetime", widget: "date", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Body", name: "body", widget: "markdown" }
