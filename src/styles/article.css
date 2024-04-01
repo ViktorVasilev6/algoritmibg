@@ -8,12 +8,21 @@
 .lecture-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    font-family: 'Source Serif Pro';
+}
+
+.lecture-container h2,
+.lecture-container h3 {
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
 }
 
 .lecture-container p {
     text-indent: 3rem;
     text-align: justify;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+    font-size: 1.1rem;
 }
 
 .lecture-container img {
@@ -32,6 +41,8 @@
 .lecture-container pre {
     width: 50%;
     margin-inline: auto;
+    white-space: pre-wrap;
+    margin-bottom: 2rem;
     code {
         border-radius: 0.75rem;
     }
