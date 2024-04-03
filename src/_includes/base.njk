@@ -1,49 +1,62 @@
 <html lang="bg">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
-    <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.css">
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
-    <title>{{ titleBar }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/style.css">
+  <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      loader: {load: ['ui/lazy']}
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>{{ titleBar }}</title>
 </head>
 
 <body>
-    {% include 'header.njk' %}
-    {{ content | safe }}
-    <span class="pageNr" style="display: none;">{{ pageNr }}</span>
-    <span class="iconClr" style="display: none;">{{ iconClr }}</span>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var pageNr = document.querySelector(".pageNr").innerHTML;
-            var iconClr = document.querySelector(".iconClr").innerHTML;
+  {% include 'header.njk' %}
+  {{ content | safe }}
+  <span class="pageNr" style="display: none;">{{ pageNr }}</span>
+  <span class="iconClr" style="display: none;">{{ iconClr }}</span>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var pageNr = document.querySelector(".pageNr").innerHTML;
+      var iconClr = document.querySelector(".iconClr").innerHTML;
 
-            var ul = document.querySelector("nav ul");
-            var li = ul.querySelectorAll("li");
-            var nthChild = li[pageNr - 1].querySelector("a");
+      var ul = document.querySelector("nav ul");
+      var li = ul.querySelectorAll("li");
+      var nthChild = li[pageNr - 1].querySelector("a");
 
-            nthChild.style.backgroundSize = "100% 1px";
-            nthChild = nthChild.querySelector("i");
-            nthChild.style.color = "var(" + iconClr + ")";
-        });
-    </script>
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll()</script>
-    <script>
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", (user) => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
+      nthChild.style.backgroundSize = "100% 1px";
+      nthChild = nthChild.querySelector("i");
+      nthChild.style.color = "var(" + iconClr + ")";
+    });
+  </script>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll()</script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
           });
         }
-    </script>
+      });
+    }
+  </script>
 </body>
 
 </html>

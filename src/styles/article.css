@@ -48,6 +48,27 @@
     }
 }
 
+.MathJax {
+    font-size: 1.25rem !important;
+}
+
+mjx-container *::before {
+    padding-top: 0 !important;
+}
+
+.mjx-c2212::before, .mjx-c2B::before {
+    padding-right: 0.75rem !important;
+}
+.mjx-c2F::before {
+    padding-left: 4px !important;
+}
+.mjx-c5D::before {
+    padding-left: 2px !important;
+}
+.mjx-c3D::before {
+    padding-right: 9px !important;
+}
+
 .article-footer {
     display: flex;
     justify-content: space-between;
