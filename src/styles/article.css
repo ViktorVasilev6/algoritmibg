@@ -54,11 +54,6 @@
 
 .MathJax {
     font-size: 1.25rem !important;
-    /*color: rgb(246, 241, 194) !important;*/
-}
-
-mjx-container *::before {
-    padding-top: 0 !important;
 }
 
 .article-footer {
