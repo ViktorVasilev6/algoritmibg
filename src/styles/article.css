@@ -6,9 +6,9 @@
 }
 
 .lecture-container {
+    font-family: "Noto Sans", sans-serif !important;
     display: flex;
-    flex-direction: column;
-    font-family: 'Source Serif Pro';
+    flex-direction: column;  
 }
 
 .lecture-container h2,
@@ -17,12 +17,14 @@
     text-decoration: underline;
 }
 
-.lecture-container p {
+.lecture-container p,
+.lecture-container ul {
     text-indent: 3rem;
     text-align: justify;
+    hyphens: auto;
     margin-bottom: 2rem;
-    letter-spacing: 0.02em;
     font-size: 1.1rem;
+    list-style: none;
 }
 
 .lecture-container img {
@@ -39,35 +41,24 @@
 }
 
 .lecture-container pre {
-    width: 50%;
+    width: 70%;
     margin-inline: auto;
     white-space: pre-wrap;
     margin-bottom: 2rem;
     code {
+        font-family: "Consolas" !important;
         border-radius: 0.75rem;
+        font-size: 1rem;
     }
 }
 
 .MathJax {
     font-size: 1.25rem !important;
-    color: rgb(246, 241, 194) !important;
+    /*color: rgb(246, 241, 194) !important;*/
 }
 
 mjx-container *::before {
     padding-top: 0 !important;
-}
-
-.mjx-c2212::before, .mjx-c2B::before {
-    padding-right: 0.75rem !important;
-}
-.mjx-c2F::before {
-    padding-left: 4px !important;
-}
-.mjx-c5D::before {
-    padding-left: 2px !important;
-}
-.mjx-c3D::before {
-    padding-right: 9px !important;
 }
 
 .article-footer {
