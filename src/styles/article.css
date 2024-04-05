@@ -31,7 +31,8 @@
     display: block;
     margin-inline: auto;
     margin-bottom: 1rem;
-    width: 800px;
+    max-width: 100%;
+    height: auto;
 }
 
 .lecture-container em {
@@ -63,4 +64,25 @@
 .article-footer h2 {
     font-size: 1rem;
     margin-top: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .lecture-container h1 {
+        font-size: 1.25rem;
+    }
+    .lecture-container h2 {
+        font-size: 1rem;
+    }
+    .lecture-container p,
+    .lecture-container ul,
+    .lecture-container code, 
+    .article-footer h2 {
+        font-size: 0.8rem !important;
+    }
+    .article-footer h2 {
+        font-size: 0.6rem !important;
+    }
+    .lecture-container .MathJax {
+        font-size: 0.95rem !important;
+    }
 }
