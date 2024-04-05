@@ -61,22 +61,28 @@ nav>ul {
 }
 
 nav li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'Space Grotesk', sans-serif;
     line-height: 64px;
     opacity: 0.8;
     transition: all 0.2s ease;
 }
 
+nav ul * {
+    flex-shrink: 0;
+}
+
 nav li:hover {
     opacity: 1;
 }
 
-nav a>i {
-    margin-right: 0.5rem;
+nav i {
     transition: all 0.2s ease;
 }
 
-nav li>a {
+nav a {
     display: block;
     height: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
@@ -87,7 +93,7 @@ nav li>a {
     transition: all 0.3s ease
 }
 
-nav li>a:hover {
+nav a:hover {
     background-size: 100% 1px;
     .fa-house {
         color: var(--clr-house)

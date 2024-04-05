@@ -39,8 +39,8 @@
       var iconClr = document.querySelector(".iconClr").innerHTML;
 
       var ul = document.querySelector("nav ul");
-      var li = ul.querySelectorAll("li");
-      var nthChild = li[pageNr - 1].querySelector("a");
+      var a = ul.querySelectorAll("a");
+      var nthChild = a[pageNr - 1];
 
       nthChild.style.backgroundSize = "100% 1px";
       nthChild = nthChild.querySelector("i");
