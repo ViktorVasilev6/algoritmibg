@@ -143,4 +143,7 @@ nav ul a:hover {
     nav {
         font-size: 1rem;
     }
+    nav li {
+        gap: 0.1rem !important;
+    }
 }
