@@ -25,6 +25,7 @@
     margin-bottom: 2rem;
     font-size: 1.1rem;
     list-style: none;
+    line-height: 1.75rem;
 }
 
 .lecture-container img {
@@ -66,23 +67,35 @@
     margin-top: 1rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 35em) {
     .lecture-container h1 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     .lecture-container h2 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     .lecture-container p,
     .lecture-container ul,
-    .lecture-container code, 
-    .article-footer h2 {
-        font-size: 0.8rem !important;
+    .lecture-container code {
+        font-size: 1rem !important;
     }
     .article-footer h2 {
-        font-size: 0.6rem !important;
+        font-size: 0.7rem !important;
     }
     .lecture-container .MathJax {
-        font-size: 0.95rem !important;
+        font-size: 1.1rem !important;
+    }
+    .lecture-container pre {
+        width: 95%;
+        code {
+            font-size: 0.9rem !important;
+        }
+    }
+    .lecture-container p {
+        text-indent: 1.5rem;
+        line-height: 1.6rem;
+    }
+    .lecture-container h3 {
+        font-size: 1.1rem !important;
     }
 }

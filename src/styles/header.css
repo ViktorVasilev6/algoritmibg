@@ -136,15 +136,11 @@ nav ul a:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-@media only screen and (max-width: 767px) {
-    nav ul,
-    .nav-buttons {
+@media (max-width: 35em) {
+    .logo, .nav-buttons {
         display: none;
     }
-    .logo h1 {
-        font-size: 1.75rem !important;
+    nav {
+        font-size: 1rem;
     }
-    .logo h1 a {
-        line-height: 3rem !important;
-    }
-  }
+}

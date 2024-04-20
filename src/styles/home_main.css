@@ -41,3 +41,21 @@
             background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 35em)
+{
+    .wrapper {
+        padding-inline: 1rem !important;
+    }
+    .intro>h1 {
+        font-size: 3rem;
+    }
+    .intro>p {
+        font-size: 1.5rem;
+    }
+    .intro>a.link-lectures {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+    }
+}

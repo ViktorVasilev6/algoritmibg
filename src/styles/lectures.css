@@ -28,3 +28,20 @@
     text-decoration: underline;
     margin-bottom: 0.5rem;
 }
+
+@media (max-width: 35em) {
+    .lectures-container,
+    .lecture-container {
+        width: 90%;
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+    .lectures-container h2 {
+        font-size: 1.5rem;
+    }
+    .lectures-container ul li {
+        font-size: 1.1rem;
+        margin-left: 0.75rem;
+        opacity: 0.6;
+    }
+}
