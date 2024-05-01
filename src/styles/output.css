@@ -1013,6 +1013,10 @@ video {
   height: 100vh;
 }
 
+.h-dvh{
+  height: 100dvh;
+}
+
 .w-2\/12{
   width: 16.666667%;
 }
