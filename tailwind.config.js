@@ -49,6 +49,12 @@ module.exports = {
               '--tw-shadow-colored': 'inset 0 2px 4px 0 var(--tw-shadow-color)',
               'box-shadow': 'var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)',
             },
+            p: {
+              'text-align': 'justify',
+            },
+            ul: {
+              'padding-left': 0
+            },
             h1: {
               'text-align': 'center'
             }

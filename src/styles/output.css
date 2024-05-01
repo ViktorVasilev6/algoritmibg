@@ -604,6 +604,7 @@ video {
 .prose-base :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   margin-top: 1.25em;
   margin-bottom: 1.25em;
+  text-align: justify;
 }
 
 .prose-base :where([class~="lead"]):not(:where([class~="not-prose"],[class~="not-prose"] *)){
@@ -717,6 +718,7 @@ video {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   padding-inline-start: 1.625em;
+  padding-left: 0;
 }
 
 .prose-base :where(li):not(:where([class~="not-prose"],[class~="not-prose"] *)){
@@ -1009,12 +1011,12 @@ video {
   display: none;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .h-dvh{
   height: 100dvh;
+}
+
+.h-screen{
+  height: 100vh;
 }
 
 .w-2\/12{
