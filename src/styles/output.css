@@ -864,10 +864,10 @@ video {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   border-radius: 0.5rem;
   border-width: 2px;
   border-color: transparent;
-  padding: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(54 70 112 / var(--tw-text-opacity));
   transition-property: all;
@@ -882,7 +882,6 @@ video {
 
 @media (min-width: 1024px){
   .nav-item{
-    justify-content: center;
     padding: 0px;
   }
 }
@@ -891,8 +890,6 @@ video {
   display: none;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 @media (min-width: 1024px){
@@ -917,6 +914,16 @@ video {
 
 .nav-button:active{
   background-color: rgb(156 163 175 / 0.3);
+}
+
+.nav-icon{
+  padding: 0.5rem;
+}
+
+@media (min-width: 1024px){
+  .nav-icon{
+    padding: 0px;
+  }
 }
 
 .txt-gradient {
@@ -1019,8 +1026,8 @@ video {
   height: 100vh;
 }
 
-.w-2\/12{
-  width: 16.666667%;
+.w-\[16\.666667vw\]{
+  width: 16.666667vw;
 }
 
 .w-full{

@@ -16,13 +16,16 @@
 
 @layer components {
   .nav-item {
-    @apply flex items-center justify-center lg:justify-center w-full lg:p-0 p-2 rounded-lg border-2 border-transparent text-[#364670] hover:bg-[#F9F9F9] cursor-pointer transition-all duration-300;
+    @apply flex items-center justify-center gap-4 w-full lg:p-0 rounded-lg border-2 border-transparent text-[#364670] hover:bg-[#F9F9F9] cursor-pointer transition-all duration-300;
   }
   .nav-link {
-    @apply hidden lg:inline-block py-3 px-4;
+    @apply hidden lg:inline-block py-3;
   }
   .nav-button {
     @apply transition-all duration-300 hover:bg-gray-400/[0.1] active:bg-gray-400/[0.3] p-3 w-12 h-12 rounded-full;
+  }
+  .nav-icon {
+    @apply lg:p-0 p-2;
   }
   .txt-gradient {
    /* background: linear-gradient(to right, #38bdf8, #c084fc);*/
