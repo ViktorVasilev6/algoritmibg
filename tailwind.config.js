@@ -4,6 +4,9 @@ module.exports = {
   '*.{html,js}'],
   theme: {
     extend: {
+      colors: {
+        "nav-hover-clr": "var(--nav-hover-clr)"
+      },
       typography: {
         xl: {
           css: {

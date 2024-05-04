@@ -12,17 +12,22 @@
   --clr-book: rgb(196, 164, 132);
   --clr-question: rgb(246, 110, 110);
   --clr-globe: rgb(183, 252, 252);
+
+  --nav-hover-clr: #F9F9F9;
+  --nav-bg-clr: #F5F5F5;
+  --global-bg-clr: #f0f5fd;
 }
 
 @layer components {
   .nav-item {
-    @apply flex items-center justify-center gap-4 w-full lg:p-0 rounded-lg border-2 border-transparent text-[#364670] hover:bg-[#F9F9F9] cursor-pointer transition-all duration-300;
+    @apply flex items-center justify-center gap-4 w-full lg:p-0 rounded-lg border-2 border-transparent text-[#364670] 
+           hover:bg-nav-hover-clr cursor-pointer transition-all duration-300 ease-out;
   }
   .nav-link {
     @apply hidden lg:inline-block py-3;
   }
   .nav-button {
-    @apply transition-all duration-300 hover:bg-gray-400/[0.1] active:bg-gray-400/[0.3] p-3 w-12 h-12 rounded-full;
+    @apply transition-all duration-300 ease-out hover:bg-gray-400/[0.1] active:bg-gray-400/[0.3] p-3 w-12 h-12 rounded-full;
   }
   .nav-icon {
     @apply lg:p-0 p-2;
@@ -46,11 +51,17 @@
 
 body {
   color: black;
-  background-color: #f0f5fd;
+  background-color: var(--global-bg-clr);
   overflow-x: hidden;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  transition: all 300ms ease-out;
 }
 
-.fa-moon {
-  text-align: center;
+article img {
+  filter: invert(100%);
+  transition: all 300ms ease-out;
+}
+
+.no-transition * {
+  transition: none !important;
 }

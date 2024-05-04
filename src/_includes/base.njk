@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/output.css">
-  <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/intellij-light.min.css">
+  <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script type="text/javascript" src="/scripts/toggleMode.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
   <link rel="icon" type="image/x-icon" href="/assets/theta_icon.png">
   <script>
@@ -48,7 +49,7 @@
       var iconClr = document.querySelector(".iconClr").innerHTML;
 
       var li = document.querySelectorAll("nav ul .nav-item");
-      li[pageNr - 1].style.backgroundColor = "#F5F5F5";
+      li[pageNr - 1].style.backgroundColor = "var(--nav-bg-clr)";
       
       var icon = li[pageNr - 1].querySelector("i");
       icon.style.color = "var(" + iconClr + ")";
