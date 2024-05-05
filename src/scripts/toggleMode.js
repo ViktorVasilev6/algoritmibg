@@ -15,7 +15,7 @@ function toggleMode(noAnimation) {
         localStorage.setItem('theme','dark');
         // Images
         var img = document.querySelectorAll("article img");
-        if(img != null) {
+        if(img) {
             img.forEach(el => {
                 el.style.filter = "invert(0%)";
             });
@@ -27,7 +27,7 @@ function toggleMode(noAnimation) {
         localStorage.setItem('theme','light');
         // Images
         var img = document.querySelectorAll("article img");
-        if(img != null) {
+        if(img) {
             img.forEach(el => {
                 el.style.filter = "invert(100%)";
             });
@@ -50,6 +50,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     var icon = document.querySelector(".nav-button i");
     if (theme === "dark") {
+        var img = document.querySelectorAll("article img");
+        if(img) {
+            img.forEach(el => {
+                el.style.filter = "invert(0%)";
+            });
+        }
         icon.classList.add('fa-sun');
     } else {
         icon.classList.add('fa-moon');
