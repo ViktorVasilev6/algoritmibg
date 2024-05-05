@@ -1,11 +1,11 @@
 ---
 layout: 'base.njk'
 ---
-    <div class="lecture-container">
+    <article class="lg:prose-xl prose-base lg:px-40 lg:py-14 py-5 px-5">
         <h1 class="lecture-title">{{ titleBar }}</h1>
         {{ content | safe }}
-        <div class="article-footer">
+        <div class="text-xs">
             <h2>Автор: {{ author }}</h2>
             <h2 class="edit-date">Последна редакция: {{ date | postDate}}</h2>
         </div>
-</div>
+    </article>

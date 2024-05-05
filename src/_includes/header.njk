@@ -1,20 +1,27 @@
-<header>
-    <nav>
-        <div class="logo">
-            <h1><a href="/">А&Omega;г&Theta;ритми</a></h1>
-        </div>
-        <ul>
-            <a href="/"><li><i class="fa-solid fa-house"></i>Начало</li></a>
-            <a href="/lectures"><li><i class="fa-solid fa-book"></i>Лекции</li></a>
-            <a href="#"><li><i class="fa-solid fa-globe"></i>Новини</li></a>
-            <a href="#"><li><i class="fa-solid fa-question"></i>За сайта</li></a>
+<nav class="flex flex-col items-center justify-between h-dvh w-[16.666667vw] shadow-lg lg:p-5 bg-nav-bg-clr fixed left-0 top-0 z-[1000]">
+    <div class="flex flex-col">
+        <h1 class="hidden font-bold text-3xl mt-8 mb-10 text-nav-item-clr text-center lg:block transition-all duration-300 ease-out"><a href="/">А&Omega;г&Theta;ритми</a></h1>
+        <ul class="flex flex-col items-center lg:items-stretch gap-5 m-5 lg:text-lg text-xl">
+            <a href="/" class="nav-item">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <li class="nav-link">Начало</li>
+            </a>
+            <a href="/lectures" class="nav-item">
+                <i class="fa-solid fa-book nav-icon"></i>
+                <li class="nav-link">Лекции</li>
+            </a>
+            <a class="nav-item">
+                <i class="fa-solid fa-globe nav-icon"></i>
+                <li class="nav-link">Новини</li>
+            </a>
+            <a class="nav-item">
+                <i class="fa-solid fa-question nav-icon"></i>
+                <li class="nav-link">За сайта</li>
+            </a>
         </ul>
-        <div class="nav-buttons">
-            <button class="btn-hamburger">
-                <div class="bar"></div>
-            </button>
-            <button class="btn-mode"><i class="fa-regular fa-moon"></i></button>
-            <button class="btn-mode"><i class="fa-solid fa-envelope"></i></button>
-        </div>
-    </nav>
-</header>
+    </div>
+    <div class="flex lg:flex-row flex-col lg:gap-10 items-center justify-center">
+        <button class="nav-button" onclick=toggleMode(false)><i class="fa-regular text-2xl"></i></button>
+        <button class="nav-button"><i class="fa-solid fa-envelope text-xl"></i></button>
+    </div>
+</nav>

@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/intellij-light.min.css">
   <script src="https://kit.fontawesome.com/da4aaf63d5.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.css">
-  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script type="text/javascript" src="/scripts/toggleMode.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="/assets/theta_icon.png">
   <script>
     window.MathJax = {
       tex: {
@@ -34,9 +36,11 @@
   <link rel="icon" href="../assets/theta_icon.png">
 </head>
 
-<body>
+<body class="flex">
   {% include 'header.njk' %}
-  {{ content | safe }}
+  <main class="flex-grow ml-[16.5%] w-full min-w-0">
+    {{ content | safe }}
+  </main>
   <span class="pageNr" style="display: none;">{{ pageNr }}</span>
   <span class="iconClr" style="display: none;">{{ iconClr }}</span>
   <script>
@@ -44,14 +48,11 @@
       var pageNr = document.querySelector(".pageNr").innerHTML;
       var iconClr = document.querySelector(".iconClr").innerHTML;
 
-      var ul = document.querySelector("nav ul");
-      var a = ul.querySelectorAll("a");
-      var nthChild = a[pageNr - 1];
-
-      nthChild.style.backgroundSize = "100% 1px";
-      nthChild = nthChild.querySelector("i");
-      console.log(nthChild);
-      nthChild.style.color = "var(" + iconClr + ")";
+      var li = document.querySelectorAll("nav ul .nav-item");
+      li[pageNr - 1].style.backgroundColor = "var(--nav-item-bg-clr)";
+      
+      var icon = li[pageNr - 1].querySelector("i");
+      icon.style.color = "var(" + iconClr + ")";
     });
   </script>
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
