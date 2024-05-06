@@ -877,6 +877,8 @@ video {
 
 .nav-item:hover{
   background-color: var(--nav-hover-clr);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width: 1024px){
