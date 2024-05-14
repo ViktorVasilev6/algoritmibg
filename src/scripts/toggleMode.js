@@ -1,8 +1,24 @@
 const theme = localStorage.getItem("theme");
+
+const light = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/intellij-light.min.css';
+const dark = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/equilibrium-gray-dark.css';
+
+let hljsLink = document.createElement('link');
+hljsLink.rel = 'stylesheet';
+hljsLink.classList.add('hljsLink');
+hljsLink.setAttribute('href', theme === 'dark' ? dark : light);
+document.head.appendChild(hljsLink);
+
 if(localStorage.getItem('theme') == null) {
     localStorage.setItem('theme', 'light');
+    hljsLink.setAttribute('href', light);
+    document.head.appendChild(hljsLink);
 }   
 else if (theme === "dark") {
+    var newhljsLink = document.querySelector('.hljsLink');
+    hljsLink.setAttribute('href', dark);
+    document.head.replaceChild(hljsLink, newhljsLink);
+    document.documentElement.classList.add('no-transition');
     document.documentElement.classList.add("dark");
 }
 
@@ -10,7 +26,7 @@ function toggleMode(noAnimation) {
     if(noAnimation) {
         document.documentElement.classList.add('no-transition');
     }
-    // <i class="fa-regular fa-sun"></i>
+
     if(localStorage.getItem('theme') === 'light') {
         localStorage.setItem('theme','dark');
         // Images
@@ -22,6 +38,11 @@ function toggleMode(noAnimation) {
         }
         var icon = document.querySelector(".nav-button i");
         icon.classList.replace('fa-moon', 'fa-sun');
+        // Code
+        var newhljsLink = document.querySelector('.hljsLink');
+        newhljsLink.setAttribute('href', dark);
+        document.head.replaceChild(newhljsLink, hljsLink);
+
 
     } else {
         localStorage.setItem('theme','light');
@@ -34,6 +55,10 @@ function toggleMode(noAnimation) {
         }
         var icon = document.querySelector(".nav-button i");
         icon.classList.replace('fa-sun', 'fa-moon');
+        // Code
+        var newhljsLink = document.querySelector('.hljsLink');
+        newhljsLink.setAttribute('href', light);
+        document.head.replaceChild(newhljsLink, hljsLink);
     }
     // Button
     var btn = document.querySelector("main div div a");

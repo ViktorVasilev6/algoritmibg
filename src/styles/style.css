@@ -61,7 +61,7 @@
     @apply lg:text-xl text-lg ml-5 mb-4;
   }
   .lecture-list li {
-    @apply opacity-50 font-semibold
+    @apply opacity-50 font-semibold;
   }
 }
 
